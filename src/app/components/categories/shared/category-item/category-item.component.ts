@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Category }  from '../../../../models/category.interface'
 
 @Component({
   selector: 'app-category-item',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CategoryItemComponent {
 
+  @Input() category: Category = { imageSrc: '', imageAlt: '',  categoryName: ''};
+
+
+  constructor() {}
 }

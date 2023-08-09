@@ -23,3 +23,18 @@ img.image-active {
 .dot:hover{
   opacity: 1;
 }
+
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+

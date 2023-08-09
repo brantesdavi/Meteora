@@ -2,10 +2,15 @@
   class="text-center flex justify-center relative">
   <img *ngFor="let image of images; let i=index"
       [src]="image.imageSrc" [alt]="image.imageAlt"
-      [ngClass]="{'image-active': selectedIndex === i}"
+      [ngClass]="{
+        'image-active': selectedIndex === i,
+        'animate-fade': true
+      }"
+      class="transition-opacity duration-1000"
   >
 
-  <div *ngIf="indicators" class="absolute right-0 left-0 bottom-32 flex justify-center p-0 mg-1">
+
+  <div *ngIf="indicators" class="absolute right-0 left-0 bottom-8 flex justify-center p-0 mg-1">
     <span *ngFor="let dot of images; let i=index"
         class="dot"
         [ngClass]="{'active':selectedIndex === i}"

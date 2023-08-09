@@ -10,6 +10,9 @@ import { CategoryItemComponent } from './category-item.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CategoryItemComponent
   ]
 })
 export class CategoryItemModule { }

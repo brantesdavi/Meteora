@@ -11,7 +11,11 @@ module.exports = {
         primaryGrey: '#343A40'
       },
       fontSize:{
-        'tablet': '13px'
+        'tablet': '13px',
+        '32': '32px'
+      },
+      width:{
+        '1110': '1110px'
       }
     },
   },

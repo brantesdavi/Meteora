@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from "./components/header/header.module";
 import { CarouselModule } from './components/carousel/carousel.module';
+import { CategoriesModule } from "./components/categories/categories.module";
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { CarouselModule } from './components/carousel/carousel.module';
         BrowserModule,
         AppRoutingModule,
         HeaderModule,
-        CarouselModule
+        CarouselModule,
+        CategoriesModule
     ]
 })
 export class AppModule { }
