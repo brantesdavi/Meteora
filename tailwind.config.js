@@ -8,6 +8,7 @@ module.exports = {
       },
       colors:{
         primaryColor: '#DAFF01',
+        secondaryColor: '#9353FF',
         primaryGrey: '#343A40'
       },
       fontSize:{
@@ -15,7 +16,8 @@ module.exports = {
         '32': '32px'
       },
       width:{
-        '1110': '1110px'
+        '1110': '1110px',
+        '350': '350px'
       }
     },
   },

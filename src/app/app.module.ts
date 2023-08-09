@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from "./components/header/header.module";
 import { CarouselModule } from './components/carousel/carousel.module';
 import { CategoriesModule } from "./components/categories/categories.module";
+import { ProductsModule } from './components/products/products.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { CategoriesModule } from "./components/categories/categories.module";
         AppRoutingModule,
         HeaderModule,
         CarouselModule,
-        CategoriesModule
+        CategoriesModule,
+        ProductsModule
     ]
 })
 export class AppModule { }
