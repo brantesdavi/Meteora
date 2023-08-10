@@ -8,6 +8,7 @@ import { CarouselModule } from './components/carousel/carousel.module';
 import { CategoriesModule } from "./components/categories/categories.module";
 import { ProductsModule } from './components/products/products.module';
 import { FacilitiesModule } from './components/facilities/facilities.module';
+import { FooterModule } from './components/footer/footer.module';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { FacilitiesModule } from './components/facilities/facilities.module';
         CarouselModule,
         CategoriesModule,
         ProductsModule,
-        FacilitiesModule
+        FacilitiesModule,
+        FooterModule
     ]
 })
 export class AppModule { }
