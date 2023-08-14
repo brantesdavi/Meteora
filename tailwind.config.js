@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans'],
+      },
       screens:{
         'xs': '415px',
       },
@@ -10,7 +13,8 @@ module.exports = {
         primaryColor: '#DAFF01',
         secondaryColor: '#9353FF',
         primaryGrey: '#343A40',
-        secondaryGrey: '#ADB5BD'
+        secondaryGrey: '#ADB5BD',
+        radioBorder: '#DEE2E6'
       },
       fontSize:{
         'tablet': '13px',

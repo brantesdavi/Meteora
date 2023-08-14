@@ -1,0 +1,50 @@
+<div>
+  <div style="box-shadow: 0 2px 8px #333; transform: translate(-50%, -50%);" class=" z-11 bg-black fixed w-700 top-2/4 left-2/4">
+    <div class="w-full p-4 grid grid-cols-2">
+      <div>
+        <span class="text-xl font-medium text-white" >{{ data.product.name }}</span>
+      </div>
+      <div class="flex justify-end items-center">
+        <div class="cursor-pointer" (click)="closeDialog()">
+          <i class="fa-solid fa-x" style="color: #ffffff;"></i>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-white p-4 flex">
+      <img [src]="data.product.imageSrc">
+      <div class="px-4">
+        <div>
+          <div class="mb-6">
+            <span class="font-bold">{{ data.product.name}}</span>
+          </div>
+          <div class="grid grid-rows-2">
+            <span class="border-b-4">
+              <span class="mb-6">{{ data.product.desc}}</span>
+            </span>
+            <span class="text-xl font-medium mt-6" >R$ {{ data.product.price | number: '1.2-2' }}</span>
+          </div>
+          <span class="text-xs text-secondaryGrey">Validado e entregue por Riachuelo</span>
+        </div>
+        <div>
+          <div>
+            <span>Cores:</span>
+          </div>
+          <fieldset>
+            <legend>Published status</legend>
+
+            <div *ngFor="let color of data.product.colors; let i = index">
+              <input id="draft" class="peer/draft hidden" type="radio" name="status" checked />
+              <label class="peer-checked/draft: text-xs flex items-center cursor-pointer" for="draft">
+                <span [style.backgroundColor]="data.product.colors[i].hexColor" class="w-4 h-4 border-2 border-radioBorder rounded-full mr-2"></span>
+                {{data.product.colors[i].nameColor}}
+              </label>
+            </div>
+
+
+          </fieldset>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
