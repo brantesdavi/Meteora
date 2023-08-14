@@ -1,0 +1,30 @@
+<div>
+  <div style="box-shadow: 0 2px 8px #333; transform: translate(-50%, -50%);" class=" z-11 bg-black fixed w-700 top-2/4 left-2/4">
+    <div class="w-full p-4 grid grid-cols-2">
+      <div>
+        <span class="text-xl font-medium text-white" >{{ data.product.name }}</span>
+      </div>
+      <div class="flex justify-end">
+        <span class="text-white text-xl">X</span>
+      </div>
+    </div>
+    <div class="w-full bg-white p-4 flex">
+      <img [src]="data.product.imageSrc">
+      <div class="px-4">
+        <div class="mb-6">
+          <span class="font-bold">{{ data.product.name}}</span>
+        </div>
+        <div class="grid grid-rows-2">
+          <span class="border-b-4">
+            <span class="mb-6">{{ data.product.desc}}</span>
+          </span>
+          <span class="text-xl font-medium mt-6" >R$ {{ data.product.price | number: '1.2-2' }}</span>
+        </div>
+        <span class="text-xs text-secondaryGrey">Validado e entregue por Riachuelo</span>
+      </div>
+    </div>
+  </div>
+  <div class="fixed bg-black top-0 left-0 h-screen w-screen min-h-[100vh] min-w-[100vw] opacity-50">
+  </div>
+
+</div>
