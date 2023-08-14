@@ -9,7 +9,8 @@ module.exports = {
       colors:{
         primaryColor: '#DAFF01',
         secondaryColor: '#9353FF',
-        primaryGrey: '#343A40'
+        primaryGrey: '#343A40',
+        secondaryGrey: '#ADB5BD'
       },
       fontSize:{
         'tablet': '13px',
@@ -26,6 +27,7 @@ module.exports = {
         '304': '304px',
         '319': '319px',
         '690': '690px',
+        '700': '700px',
         '1110': '1110px',
 
       },
@@ -39,6 +41,23 @@ module.exports = {
       padding:{
         '17': '17px',
         '23': '23px'
+      },
+      minWidth:{
+        '320': '320px',
+        '100vw': '100vw',
+
+      },
+      minHeight: {
+        '100vh': '100vh',
+      },
+      opacity: {
+        '50': '0.5',
+      },
+      zIndex: {
+        '11': '11',
+      },
+      margin:{
+
       }
     },
   },

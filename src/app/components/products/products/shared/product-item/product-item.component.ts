@@ -1,4 +1,4 @@
-import { GenericModalComponent } from './../../../generic-modal/generic-modal.component';
+import { GenericModalComponent } from './../../../../generic-modal/generic-modal.component';
 import { Component, Input } from '@angular/core';
 import { Product } from 'src/app/models/product.interface';
 import { MatDialog } from '@angular/material/dialog'
@@ -22,6 +22,12 @@ export class ProductItemComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log('O modal foi fechado', result);
     });
+  }
+
+  closeDialog(): void{
+    if(this.dialog){
+      this.dialog.closeAll()
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-import { GenericModalModule } from './../../../generic-modal/generic-modal.module';
+import { GenericModalModule } from './../../../../generic-modal/generic-modal.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductItemComponent } from './product-item.component';

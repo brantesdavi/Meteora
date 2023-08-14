@@ -9,6 +9,7 @@ import { CategoriesModule } from "./components/categories/categories.module";
 import { ProductsModule } from './components/products/products.module';
 import { FacilitiesModule } from './components/facilities/facilities.module';
 import { FooterModule } from './components/footer/footer.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { FooterModule } from './components/footer/footer.module';
         CategoriesModule,
         ProductsModule,
         FacilitiesModule,
-        FooterModule
+        FooterModule,
+        BrowserAnimationsModule
     ]
 })
 export class AppModule { }
