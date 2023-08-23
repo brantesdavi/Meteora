@@ -1,49 +1,69 @@
 <div>
   <div style="box-shadow: 0 2px 8px #333; transform: translate(-50%, -50%);" class=" z-11 bg-black fixed w-700 top-2/4 left-2/4">
-    <div class="w-full p-4 grid grid-cols-2">
+    <div class="w-full p-4 flex justify-start">
       <div>
-        <span class="text-xl font-medium text-white" >{{ data.product.name }}</span>
+        <i class="fa-solid fa-check" style="color: #7eb464;"></i>
+        <span class="text-xl font-medium text-white px-4">Confira detalhes sobre o produto</span>
       </div>
-      <div class="flex justify-end items-center">
+      <div id="x" class="ml-auto">
         <div class="cursor-pointer" (click)="closeDialog()">
-          <i class="fa-solid fa-x" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-x" style="color: #7a7a7a;"></i>
         </div>
       </div>
     </div>
+
     <div class="w-full bg-white p-4 flex">
-      <img [src]="data.product.imageSrc">
-      <div class="px-4">
-        <div>
-          <div class="mb-6">
-            <span class="font-bold">{{ data.product.name}}</span>
-          </div>
-          <div class="grid grid-rows-2">
-            <span class="border-b-4">
-              <span class="mb-6">{{ data.product.desc}}</span>
-            </span>
-            <span class="text-xl font-medium mt-6" >R$ {{ data.product.price | number: '1.2-2' }}</span>
-          </div>
-          <span class="text-xs text-secondaryGrey">Validado e entregue por Riachuelo</span>
-        </div>
+      <img class="" [src]="data.product.imageSrc">
+      <div class="w-318 h-474 px-4 grid grid-rows-3">
         <div>
           <div>
-            <span>Cores:</span>
-          </div>
-          <fieldset>
-            <legend>Published status</legend>
-
-            <div *ngFor="let color of data.product.colors; let i = index">
-              <input id="draft" class="peer/draft hidden" type="radio" name="status" checked />
-              <label class="peer-checked/draft: text-xs flex items-center cursor-pointer" for="draft">
-                <span [style.backgroundColor]="data.product.colors[i].hexColor" class="w-4 h-4 border-2 border-radioBorder rounded-full mr-2"></span>
-                {{data.product.colors[i].nameColor}}
-              </label>
+            <div class="w-full">
+              <span class="font-bold">{{ data.product.name}}</span>
             </div>
-
-
-          </fieldset>
-
+            <span class="text-xs">{{ data.product.desc}}</span>
+          </div>
+          <div>
+            <div class="w-full">
+              <span class="text-xl font-medium" >R$ {{ data.product.price | number: '1.2-2' }}</span>
+            </div>
+            <span class="text-xs text-secondaryGrey">Vendido e entregue por Riachuelo</span>
+          </div>
         </div>
+        <fieldset>
+          <legend class="text-xs font-bold py-6">Cores:</legend>
+
+          <div class="flex justify-start gap-x-4">
+            <div *ngFor="let color of data.product.colors; let i = index">
+              <div id="{{i}}" class="grid grid-rows-2" (click)="clickRadioColor(i)">
+                <div class="w-full flex justify-center">
+                  <div id="bolinha" [style.backgroundColor]="color.hexColor" [ngClass]="clickedDivColor === i ? 'border-4 border-secondaryColor' : 'border-2 border-radioBorder'" class="w-13 h-13 border-radioBorder rounded-full">
+                  </div>
+                </div>
+                <label class="text-xs flex items-center cursor-pointer" [for]="'input-' + i">
+                  {{color.nameColor}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-xs font-bold py-6">Tamanho:</legend>
+
+          <div class="flex justify-start gap-x-4">
+            <div *ngFor="let size of sizes; let i = index">
+              <div id="{{i}}" (click)="clickRadioSize(i)">
+                <div class="w-full flex justify-center">
+                  <div id="bolinha"  [ngClass]="clickedDivSize === i ? 'border-4 border-secondaryColor' : 'border-2 border-radioBorder'" class="bg-white w-13 h-13 border-radioBorder rounded-full">
+                  </div>
+                </div>
+
+                <label class="text-xs flex justify-center cursor-pointer" [for]="'input-' + i">
+                  {{sizes[i]}}
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
     </div>
   </div>

@@ -13,6 +13,10 @@ export class ProductModalComponent {
 
   sizes: string[] = ['P', 'PP', 'M', 'G', 'GG'];
 
+  clickedDivColor: number | null = null;
+  clickedDivSize: number | null = null;
+
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: { product: Product },
   private dialog: MatDialogRef<ProductModalComponent> ) { }
 
@@ -20,5 +24,11 @@ export class ProductModalComponent {
     this.dialog.close();
   }
 
+  clickRadioColor(index: number) {
+    this.clickedDivColor = index;
+  }
+  clickRadioSize(index: number) {
+    this.clickedDivSize = index;
+  }
 
 }
